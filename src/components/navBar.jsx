@@ -26,7 +26,6 @@ function NavBar() {
         className="py-2 shadow-sm"
       >
         <Container fluid className="px-3 px-lg-5">
-
           {/* Logo */}
           <Navbar.Brand as={Link} to="/#home" onClick={closeNavbar}>
             <img src={logo} alt="Tiwari Nursing Home" />
@@ -39,10 +38,8 @@ function NavBar() {
           />
 
           <Navbar.Collapse id="basic-navbar-nav">
-
             {/* Links */}
             <Nav className="mx-auto nav-mobile">
-
               <Nav.Link as={NavLink} to="/#home" onClick={closeNavbar}>
                 Home
               </Nav.Link>
@@ -70,12 +67,10 @@ function NavBar() {
               <Nav.Link as={NavLink} to="/patholab" onClick={closeNavbar}>
                 Pathology Lab
               </Nav.Link>
-
             </Nav>
 
             {/* Right Side */}
             <div className="d-flex gap-2 nav-btn-group">
-
               <Dropdown>
                 <Dropdown.Toggle className="call-btn no-arrow">
                   <FaPhoneAlt className="me-2" />
@@ -83,21 +78,22 @@ function NavBar() {
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu align="end">
-  <Dropdown.Item href={`tel:${phoneNumber1}`}>
-    <FaPhoneAlt style={{ color: "green", marginRight: "8px" }} />
-    {phoneNumber1}
-  </Dropdown.Item>
+                  <Dropdown.Item href={`tel:${phoneNumber1}`}>
+                    <FaPhoneAlt
+                      style={{ color: "green", marginRight: "8px" }}
+                    />
+                    {phoneNumber1}
+                  </Dropdown.Item>
 
-  <Dropdown.Item href={`tel:${phoneNumber2}`}>
-    <FaPhoneAlt style={{ color: "green", marginRight: "8px" }} />
-    {phoneNumber2}
-  </Dropdown.Item>
-</Dropdown.Menu>
-
+                  <Dropdown.Item href={`tel:${phoneNumber2}`}>
+                    <FaPhoneAlt
+                      style={{ color: "green", marginRight: "8px" }}
+                    />
+                    {phoneNumber2}
+                  </Dropdown.Item>
+                </Dropdown.Menu>
               </Dropdown>
-
             </div>
-
           </Navbar.Collapse>
         </Container>
       </Navbar>
