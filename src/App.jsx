@@ -6,6 +6,7 @@ import ScrollToSection from "./components/ScrollToSection";
 import StructuredData from "./components/StructuredData";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Analytics } from "@vercel/analytics/react"
 
 const HOME = lazy(() => import("./components/home"));
 const About = lazy(() => import("./components/about"));
@@ -14,7 +15,7 @@ const Patholab = lazy(() => import("./components/patholab"));
 function App() {
   return (
     <div className="d-flex flex-column min-vh-100">
-      
+      <Analytics/>
       <NavBar />
       <ScrollToSection />
       <StructuredData />
