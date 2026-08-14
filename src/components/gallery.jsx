@@ -75,6 +75,7 @@ function Gallery() {
                 <img
                   src={img}
                   alt={`Tiwari Nursing Home gallery image ${startIndex + index + 1}`}
+                  loading="lazy"
                 />
               </div>
             ))}
