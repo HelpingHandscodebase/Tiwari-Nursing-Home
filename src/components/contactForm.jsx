@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
+import "./contactForm.css";
 
 function ContactForm({ onSuccess }) {
   const form = useRef();
@@ -97,7 +98,7 @@ function ContactForm({ onSuccess }) {
           <textarea
             name="message"
             className="form-control"
-            rows="5"
+            rows="3"
             placeholder="Tell us about your electrical requirement..."
             required
           />
