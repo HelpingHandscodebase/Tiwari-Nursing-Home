@@ -1,5 +1,5 @@
-import Banner from "./bannerForEB";
-import ServicesForEB from "./servicesForEB";
+import Banner from "./bannerEB";
+// import ServicesForEB from "./servicesForEB";
 import Features from "./features";
 import AboutEB from "./AboutEB";
 import Gallery from "./gallery";
@@ -23,7 +23,7 @@ const Home = () => {
         <Banner />
       </div>
       <div id="servicesForEB">
-        <ServicesForEB />
+        {/* <ServicesForEB /> */}
       </div>
       <div id="features" className="mt-4">
         <Features />
