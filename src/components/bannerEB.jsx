@@ -6,18 +6,40 @@ import {
   FaSolarPanel,
   FaExclamationTriangle,
 } from "react-icons/fa";
-
 import { FaPhoneAlt } from "react-icons/fa";
 import heroBg from "../assets/electrical-brothers/bermix-studio.webp";
-
 import emergencyImg from "../assets/electrical-brothers/clay.jpg";
 import solarImg from "../assets/electrical-brothers/solar.jpg";
-
 import wiring from "../assets/electrical-brothers/wiring.jpg";
 import toolbox from "../assets/electrical-brothers/toolbox.jpg";
 import smartMeter from "../assets/electrical-brothers/smart_electric_meter.webp";
 
+import { useState } from "react";
+import Modal from "react-bootstrap/Modal";
+import ContactForm from "./contactForm";
+import SolarForm from "./solarForm";
+
 function BannerEB() {
+  const [showContact, setShowContact] = useState(false);
+  const [showSolar, setShowSolar] = useState(false);
+
+  const handleContactShow = () => {
+    sessionStorage.setItem("formOpened", "true");
+    setShowContact(true);
+  };
+  const handleContactClose = () => setShowContact(false);
+
+  const handleSolarShow = () => {
+    sessionStorage.setItem("formOpened", "true");
+    setShowSolar(true);
+  };
+
+  const handleSolarClose = () => setShowSolar(false);
+
+  const phoneNumber = import.meta.env.VITE_PHONE_NUMBER;
+
+  // console.log("Phone Number:", phoneNumber);
+
   return (
     <>
       {/* HERO SECTION */}
@@ -37,7 +59,7 @@ function BannerEB() {
 
               <img src={emergencyImg} alt="Emergency Service" />
 
-              <a href="#contact" className="eb-btn">
+              <a href={`tel:${phoneNumber}`} className="eb-btn">
                 <FaPhoneAlt />
                 CALL HELP NOW
               </a>
@@ -49,9 +71,9 @@ function BannerEB() {
 
               <img src={solarImg} alt="Solar Service" />
 
-              <a href="#solar" className="eb-btn">
+              <button className="eb-btn" onClick={handleSolarShow}>
                 GO SOLAR & SAVE
-              </a>
+              </button>
             </div>
 
             <div className="eb-hero-content">
@@ -70,9 +92,9 @@ function BannerEB() {
                 affordable results.
               </p>
 
-              <a href="#contact" className="eb-hero-btn">
+              <button className="eb-hero-btn" onClick={handleContactShow}>
                 Get Free Quote
-              </a>
+              </button>
             </div>
           </div>
         </div>
@@ -144,6 +166,25 @@ function BannerEB() {
           </div>
         </div>
       </section>
+      <Modal show={showContact} onHide={handleContactClose} centered size="md">
+        <Modal.Header closeButton>
+          <Modal.Title>Get Free Quote</Modal.Title>
+        </Modal.Header>
+
+        <Modal.Body>
+          <ContactForm onSuccess={handleContactClose} />
+        </Modal.Body>
+      </Modal>
+
+      <Modal show={showSolar} onHide={handleSolarClose} centered size="md">
+        <Modal.Header closeButton>
+          <Modal.Title>Solar Enquiry</Modal.Title>
+        </Modal.Header>
+
+        <Modal.Body>
+          <SolarForm onSuccess={handleSolarClose} />
+        </Modal.Body>
+      </Modal>
     </>
   );
 }

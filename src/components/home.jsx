@@ -8,8 +8,25 @@ import Testimonials from "./testimonials";
 import ContactList from "./contactList";
 // import Doctors from "./doctors";
 import SEO from "./SEO";
+import Modal from "react-bootstrap/Modal";
+import ContactForm from "./contactForm";
+import { useEffect, useState } from "react";
 
 const Home = () => {
+  const [showPopup, setShowPopup] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      const formOpened = sessionStorage.getItem("formOpened");
+
+      if (!formOpened) {
+        setShowPopup(true);
+      }
+    }, 30000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div>
       <SEO
@@ -22,9 +39,7 @@ const Home = () => {
       <div id="home">
         <Banner />
       </div>
-      <div id="servicesForEB">
-        {/* <ServicesForEB /> */}
-      </div>
+      <div id="servicesForEB">{/* <ServicesForEB /> */}</div>
       <div id="features" className="mt-4">
         <Features />
       </div>
@@ -44,6 +59,20 @@ const Home = () => {
       <div id="contact">
         <ContactList />
       </div>
+      <Modal
+        show={showPopup}
+        onHide={() => setShowPopup(false)}
+        centered
+        size="md"
+      >
+        <Modal.Header closeButton>
+          <Modal.Title>Get Your Free Quote</Modal.Title>
+        </Modal.Header>
+
+        <Modal.Body>
+          <ContactForm onSuccess={() => setShowPopup(false)} />
+        </Modal.Body>
+      </Modal>
     </div>
   );
 };
