@@ -104,17 +104,17 @@ function BannerEB() {
       <section className="eb-services-section">
         <div className="container">
           <div className="eb-services-grid">
-            <a href="#services" className="eb-service-card">
+            <a className="eb-service-card">
               <img src={wiring} alt="New Wiring" />
               <h4>NEW WIRING</h4>
             </a>
 
-            <a href="#services" className="eb-service-card">
+            <a className="eb-service-card">
               <img src={smartMeter} alt="Smart Meter" />
               <h4>SMART METER</h4>
             </a>
 
-            <a href="#services" className="eb-service-card">
+            <a className="eb-service-card">
               <img src={toolbox} alt="General Repair" />
               <h4>GENERAL REPAIR</h4>
             </a>
@@ -124,17 +124,17 @@ function BannerEB() {
                 <h4>OUR KEY SERVICES</h4>
 
                 <div className="service-links">
-                  <a href="#wiring">
+                  <a>
                     <FaHome />
                     <span>Residential Wiring</span>
                   </a>
 
-                  <a href="#meter">
+                  <a>
                     <FaBolt />
                     <span>Smart Meter</span>
                   </a>
 
-                  <a href="#repair">
+                  <a>
                     <FaTools />
                     <span>Other Repairs</span>
                   </a>
