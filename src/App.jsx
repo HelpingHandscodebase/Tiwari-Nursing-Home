@@ -11,7 +11,7 @@ import { Analytics } from "@vercel/analytics/react"
 const HOME = lazy(() => import("./components/home"));
 // const About = lazy(() => import("./components/about"));
 // const Patholab = lazy(() => import("./components/patholab"));
-const SolarEligibility = lazy(() => import("./pages/solarEligibility"));
+const SolarEligibility = lazy(() => import("./pages/SolarEligibility"));
 
 function App() {
   return (
