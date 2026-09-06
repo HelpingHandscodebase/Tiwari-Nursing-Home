@@ -82,7 +82,6 @@ function SolarForm({ onSuccess }) {
         onSuccess();
       }
     } catch (error) {
-      console.error(error);
       toast.error("Failed to submit enquiry.");
     } finally {
       setLoading(false);
