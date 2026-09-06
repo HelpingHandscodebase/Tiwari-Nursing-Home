@@ -38,8 +38,6 @@ function BannerEB() {
 
   const phoneNumber = import.meta.env.VITE_PHONE_NUMBER;
 
-  // console.log("Phone Number:", phoneNumber);
-
   return (
     <>
       {/* HERO SECTION */}
