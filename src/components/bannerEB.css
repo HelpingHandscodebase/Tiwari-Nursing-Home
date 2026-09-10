@@ -1,0 +1,419 @@
+/* HERO */
+
+.eb-hero {
+  position: relative;
+  padding: 70px 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.eb-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.eb-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.eb-hero-grid {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+/* HERO CONTENT */
+
+.eb-hero-content {
+  flex: 1;
+  color: #fff;
+  padding-left: 25px;
+}
+
+.eb-tag {
+  display: inline-block;
+  background: #0d6efd;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.eb-hero-content h1 {
+  font-size: 3.3rem;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 18px;
+}
+
+.eb-hero-content p {
+  font-size: 1rem;
+  line-height: 1.8;
+  max-width: 600px;
+  margin-bottom: 25px;
+}
+
+.eb-hero-btn {
+  display: inline-block;
+  width: fit-content;
+  background: #0d6efd;
+  color: white;
+  text-decoration: none;
+  padding: 14px 26px;
+  border-radius: 8px;
+  font-weight: 700;
+  transition: 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.eb-hero-btn:hover {
+  background: #0b5ed7;
+  color: white;
+}
+
+/* HERO CARDS */
+
+.eb-card {
+  width: 240px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+}
+
+.eb-card h3 {
+  margin: 0;
+  padding: 12px;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.eb-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.eb-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px;
+  background: #0d6efd;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.3s;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+}
+
+.eb-btn:hover {
+  background: #0b5ed7;
+  color: white;
+}
+
+/* SERVICES */
+
+.eb-services-section {
+  background: white;
+  padding: 25px 0;
+}
+
+.eb-services-grid {
+  display: grid;
+  grid-template-columns: 180px 180px 180px 1fr;
+  gap: 15px;
+  align-items: start;
+}
+
+/* SERVICE CARDS */
+
+.eb-service-card {
+  background: #eef5ff;
+  border: 1px solid #dbe7ff;
+  border-radius: 12px;
+  overflow: hidden;
+
+  text-decoration: none;
+  color: #222;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+  transition: all 0.3s ease;
+}
+
+.eb-service-card:hover {
+  transform: translateY(-5px);
+  border-color: #0d6efd;
+  box-shadow: 0 10px 25px rgba(13, 110, 253, 0.18);
+}
+
+.eb-service-card img {
+  width: 100%;
+  height: 150px;   /* reduced from 170px */
+  object-fit: cover;
+  display: block;
+}
+
+.eb-service-card h4 {
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+/* KEY SERVICES */
+
+.eb-key-services {
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+.eb-key-top {
+  background: #eef5ff;
+  padding: 15px;
+}
+
+.eb-key-top h4 {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.service-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.service-links a {
+  text-decoration: none;
+  color: #222;
+
+  background: white;
+  border-radius: 8px;
+
+  padding: 12px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+
+  transition: 0.3s;
+}
+
+.service-links a:hover {
+  transform: translateY(-3px);
+}
+
+.service-links svg {
+  font-size: 1.6rem;
+  color: #0d6efd;
+}
+
+.service-links span {
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* BLUE ICON SECTION */
+
+.eb-key-bottom {
+  background: #072b5a;
+  padding: 18px 10px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.eb-key-bottom a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s;
+}
+
+.eb-key-bottom a:hover {
+  transform: translateY(-3px);
+}
+
+.eb-key-bottom svg {
+  font-size: 1.7rem;
+}
+
+.eb-key-bottom span {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* ==========================
+   TABLET
+========================== */
+
+@media (max-width: 991px) {
+
+  /* HERO */
+
+  .eb-hero {
+    padding: 60px 0;
+  }
+
+  .eb-hero-grid {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .eb-card {
+    width: 260px;
+  }
+
+  .eb-hero-content {
+    flex: 0 0 100%;
+    text-align: center;
+    padding-left: 0;
+    margin-top: 15px;
+  }
+
+  .eb-tag {
+    display: inline-block;
+  }
+
+  .eb-hero-content h1 {
+    font-size: 2.8rem;
+  }
+
+  .eb-hero-content p {
+    max-width: 700px;
+    margin: 0 auto 25px;
+  }
+
+  .eb-hero-btn {
+    margin: 0 auto;
+  }
+
+  /* SERVICES */
+
+  .eb-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .eb-service-card {
+    width: 100%;
+  }
+
+  .eb-service-card img {
+    height: 180px;
+  }
+
+  /* CENTER GENERAL REPAIR CARD */
+
+  .eb-service-card:nth-child(3) {
+    grid-column: 1 / span 2;
+    max-width: 300px;
+    justify-self: center;
+  }
+
+  /* FULL WIDTH KEY SERVICES */
+
+  .eb-key-services {
+    grid-column: 1 / span 2;
+  }
+}
+
+@media (max-width: 576px) {
+
+  /* HERO */
+
+  .eb-hero {
+    padding: 40px 0;
+  }
+
+  .eb-hero-grid {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .eb-card {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .eb-hero-content {
+    text-align: center;
+    padding-left: 0;
+    margin-top: 10px;
+  }
+
+  .eb-hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .eb-hero-content p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .eb-hero-btn {
+    margin: 0 auto;
+  }
+
+  /* SERVICES */
+
+  .eb-services-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .eb-service-card {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  .eb-service-card img {
+    height: 160px;
+  }
+
+  /* Reset tablet-specific centering */
+  .eb-service-card:nth-child(3) {
+    grid-column: auto;
+    max-width: 350px;
+    justify-self: stretch;
+  }
+
+  /* Key services */
+
+  .eb-key-services {
+    grid-column: auto;
+  }
+
+  .service-links {
+    grid-template-columns: 1fr;
+  }
+
+  .eb-key-bottom {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
