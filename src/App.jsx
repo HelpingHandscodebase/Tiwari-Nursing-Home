@@ -9,8 +9,9 @@ import "react-toastify/dist/ReactToastify.css";
 import { Analytics } from "@vercel/analytics/react"
 
 const HOME = lazy(() => import("./components/home"));
-const About = lazy(() => import("./components/about"));
-const Patholab = lazy(() => import("./components/patholab"));
+// const About = lazy(() => import("./components/about"));
+// const Patholab = lazy(() => import("./components/patholab"));
+const SolarEligibility = lazy(() => import("./pages/SolarEligibility"));
 
 function App() {
   return (
@@ -24,8 +25,9 @@ function App() {
         <Suspense fallback={<div className="text-center py-5"><div className="spinner-border text-primary" role="status"><span className="visually-hidden">Loading...</span></div></div>}>
           <Routes>
             <Route path="/" element={<HOME />} />
-            <Route path="/doctor/:id" element={<About />} />
-            <Route path="/patholab" element={<Patholab />} />
+            {/* <Route path="/doctor/:id" element={<About />} />
+            <Route path="/patholab" element={<Patholab />} /> */}
+            <Route path="/solar-eligibility" element={<SolarEligibility />} />
           </Routes>
         </Suspense>
       </div>

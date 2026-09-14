@@ -1,0 +1,232 @@
+/* ==========================================
+   SECTION
+========================================== */
+
+.servicesEB-section {
+  position: relative;
+  margin-top: -50px;
+  z-index: 10;
+}
+
+.servicesEB-wrapper {
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* ==========================================
+   COLUMN
+========================================== */
+
+.servicesEB-column {
+  padding: 18px;
+  height: 100%;
+  background: #ffffff;
+  border-right: 1px solid #e5e7eb;
+}
+
+.servicesEB-column:last-child {
+  border-right: none;
+}
+
+.servicesEB-heading {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 15px;
+}
+
+/* ==========================================
+   LEFT + CENTER
+========================================== */
+
+.servicesEB-flex {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.servicesEB-iconBox {
+  width: 65px;
+  height: 65px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.servicesEB-iconBox svg {
+  font-size: 1.8rem;
+}
+
+.servicesEB-meterImage {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.smart {
+  background: #eef6ff;
+  color: #2563eb;
+}
+
+.solar {
+  background: #fff7e6;
+  color: #f59e0b;
+}
+
+.servicesEB-subtitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #222;
+  line-height: 1.3;
+  margin-bottom: 8px;
+}
+
+.servicesEB-text {
+  font-size: 0.85rem;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.servicesEB-btn {
+  display: inline-block;
+  text-decoration: none;
+  background: #3b82a0;
+  color: #ffffff;
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.servicesEB-btn:hover {
+  background: #2d6a84;
+  color: #ffffff;
+}
+
+/* ==========================================
+   RIGHT GRID
+========================================== */
+
+.servicesEB-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.servicesEB-serviceBox {
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  transition: 0.3s;
+}
+
+.servicesEB-serviceBox:hover {
+  transform: translateY(-3px);
+}
+
+.servicesEB-serviceBox svg {
+  font-size: 1.4rem;
+  color: #3b82a0;
+  margin-bottom: 8px;
+}
+
+.servicesEB-serviceBox span {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #222;
+  line-height: 1.3;
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 991px) {
+
+  .servicesEB-section {
+    margin-top: 0;
+    padding-top: 20px;
+  }
+
+  .servicesEB-column {
+    border-right: none;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 20px;
+  }
+
+  .servicesEB-column:last-child {
+    border-bottom: none;
+  }
+
+  .servicesEB-heading {
+    text-align: center;
+  }
+
+  .servicesEB-flex {
+    align-items: center;
+  }
+
+  .servicesEB-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .servicesEB-serviceBox {
+    min-height: 95px;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 576px) {
+
+  .servicesEB-column {
+    padding: 20px;
+  }
+
+  .servicesEB-heading {
+    text-align: center;
+  }
+
+  .servicesEB-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .servicesEB-iconBox {
+    margin: 0 auto;
+  }
+
+  .servicesEB-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .servicesEB-serviceBox {
+    min-height: 90px;
+  }
+
+  .servicesEB-subtitle {
+    font-size: 1rem;
+  }
+
+  .servicesEB-text {
+    font-size: 0.85rem;
+  }
+}

@@ -1,22 +1,83 @@
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Dropdown } from "react-bootstrap";
 import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
 import "./navBar.css";
 // import logo from "../assets/llogoo.webp";
 import logo from "../assets/electric_logo.png";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 function NavBar() {
   const [expanded, setExpanded] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
+  const location = useLocation();
 
   const phoneNumber1 = import.meta.env.VITE_PHONE_NUMBER;
-  const phoneNumber2 = import.meta.env.VITE_PHONE_NUMBER_2;
+  // const phoneNumber2 = import.meta.env.VITE_PHONE_NUMBER_2;
 
   // Close navbar after click
   const closeNavbar = () => setExpanded(false);
+
+  useEffect(() => {
+    if (location.pathname !== "/") return;
+
+    // const handleScroll = () => {
+    //   const sections = document.querySelectorAll(
+    //     "#home, #about-us, #services, #gallery, #reviews, #contact",
+    //   );
+
+    //   let current = "home";
+
+    //   sections.forEach((section) => {
+    //     const rect = section.getBoundingClientRect();
+
+    //     if (rect.top <= 120) {
+    //       current = section.id;
+    //     }
+    //   });
+
+    //   setActiveSection(current);
+    // };
+
+    const handleScroll = () => {
+      const sections = document.querySelectorAll(
+        "#home, #about-us, #services, #gallery, #reviews, #contact",
+      );
+
+      const scrollPosition = window.innerHeight + window.scrollY;
+
+      const pageHeight = document.documentElement.scrollHeight;
+
+      // User reached bottom of page
+      if (scrollPosition >= pageHeight - 50) {
+        setActiveSection("contact");
+        return;
+      }
+
+      let current = "home";
+
+      sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+
+        if (rect.top <= 120) {
+          current = section.id;
+        }
+      });
+
+      setActiveSection(current);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    handleScroll();
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [location.pathname]);
 
   return (
     <>
@@ -29,7 +90,7 @@ function NavBar() {
       >
         <Container fluid className="px-3 px-lg-5">
           {/* Logo */}
-          <Navbar.Brand href="#home" onClick={closeNavbar}>
+          <Navbar.Brand as={HashLink} smooth to="/#home" onClick={closeNavbar}>
             <img src={logo} alt="Electrical Brothers" />
           </Navbar.Brand>
 
@@ -42,33 +103,101 @@ function NavBar() {
           <Navbar.Collapse id="basic-navbar-nav">
             {/* Links */}
             <Nav className="mx-auto nav-mobile">
-              <Nav.Link href="#home" onClick={closeNavbar}>
+              <Nav.Link
+                as={HashLink}
+                smooth
+                to="/#home"
+                className={
+                  location.pathname === "/" && activeSection === "home"
+                    ? "active"
+                    : ""
+                }
+                onClick={closeNavbar}
+              >
                 Home
               </Nav.Link>
 
-              <Nav.Link href="#about-us" onClick={closeNavbar}>
+              <Nav.Link
+                as={HashLink}
+                smooth
+                to="/#about-us"
+                className={
+                  location.pathname === "/" && activeSection === "about-us"
+                    ? "active"
+                    : ""
+                }
+                onClick={closeNavbar}
+              >
                 About Us
               </Nav.Link>
 
-              <Nav.Link href="#services" onClick={closeNavbar}>
+              <Nav.Link
+                as={HashLink}
+                smooth
+                to="/#services"
+                className={
+                  location.pathname === "/" && activeSection === "services"
+                    ? "active"
+                    : ""
+                }
+                onClick={closeNavbar}
+              >
                 Services
               </Nav.Link>
 
-              <Nav.Link href="#gallery" onClick={closeNavbar}>
+              <Nav.Link
+                as={HashLink}
+                smooth
+                to="/#gallery"
+                className={
+                  location.pathname === "/" && activeSection === "gallery"
+                    ? "active"
+                    : ""
+                }
+                onClick={closeNavbar}
+              >
                 Gallery
               </Nav.Link>
 
-              <Nav.Link href="#reviews" onClick={closeNavbar}>
+              <Nav.Link
+                as={HashLink}
+                smooth
+                to="/#reviews"
+                className={
+                  location.pathname === "/" && activeSection === "reviews"
+                    ? "active"
+                    : ""
+                }
+                onClick={closeNavbar}
+              >
                 Reviews
               </Nav.Link>
 
-              <Nav.Link href="#contact" onClick={closeNavbar}>
+              <Nav.Link
+                as={HashLink}
+                smooth
+                to="/#contact"
+                className={
+                  location.pathname === "/" && activeSection === "contact"
+                    ? "active"
+                    : ""
+                }
+                onClick={closeNavbar}
+              >
                 Contact Us
               </Nav.Link>
 
               {/* <Nav.Link as={NavLink} to="/patholab" onClick={closeNavbar}>
                 Pathology Lab
               </Nav.Link> */}
+
+              <Nav.Link
+                as={NavLink}
+                to="/solar-eligibility"
+                onClick={closeNavbar}
+              >
+                Solar Eligibility
+              </Nav.Link>
             </Nav>
 
             {/* Right Side */}

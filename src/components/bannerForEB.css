@@ -1,0 +1,327 @@
+/* ==========================================
+   HERO SECTION
+========================================== */
+
+.hero-banner {
+  position: relative;
+  min-height: 90vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  padding-top: 5px;
+}
+
+/* ==========================================
+   LEFT SERVICES
+========================================== */
+
+.service-box {
+  position: relative;
+  z-index: 2;
+  padding-right: 30px;
+}
+
+.service-box h3,
+.hero-services li {
+  color: #ffffff;
+}
+
+.service-box h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 25px;
+}
+
+.hero-services {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hero-services li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.hero-services svg {
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+/* ==========================================
+   CENTER CONTENT
+========================================== */
+
+.hero-content {
+  color: #ffffff;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1;
+  color: #ffffff;
+  margin-bottom: 25px;
+  max-width: 700px;
+}
+
+.hero-subtitle {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 20px;
+  max-width: 650px;
+}
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.explore-btn,
+.quote-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 180px;
+  height: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.explore-btn {
+  background: #0d6efd;
+  color: #ffffff !important;
+}
+
+.explore-btn:hover {
+  background: #0b5ed7;
+  transform: translateY(-2px);
+}
+
+.quote-btn {
+  background: #ffffff;
+  color: #222222 !important;
+}
+
+.quote-btn:hover {
+  background: #f5f5f5;
+  transform: translateY(-2px);
+}
+
+/* ==========================================
+   FORM CARD
+========================================== */
+
+.hero-form-card {
+  max-width: 290px;
+  margin-left: auto;
+  background: #ffffff;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.hero-form-card h4 {
+  color: #222222;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Form Layout */
+
+.hero-form-card form {
+  display: flex;
+  flex-direction: column;
+  /* gap: 10px; */
+}
+
+/* Inputs */
+
+.hero-form-card input,
+.hero-form-card textarea,
+.hero-form-card select {
+  width: 100%;
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+  padding: 10px 12px;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.hero-form-card input:focus,
+.hero-form-card textarea:focus,
+.hero-form-card select:focus {
+  border-color: #0d6efd;
+}
+
+/* Textarea */
+
+.hero-form-card textarea {
+  min-height: 90px;
+  resize: none;
+}
+
+/* Placeholder */
+
+.hero-form-card input::placeholder,
+.hero-form-card textarea::placeholder {
+  font-size: 0.9rem;
+}
+
+/* Button */
+
+.hero-form-card button {
+  width: 100%;
+  height: 42px;
+  border: none;
+  border-radius: 4px;
+  background: #0d6efd;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero-form-card button:hover {
+  background: #0b5ed7;
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 991px) {
+  .hero-banner {
+    min-height: auto;
+    padding: 60px 0 50px;
+  }
+
+  .hero-inner {
+    padding-top: 10px;
+  }
+
+  .service-box,
+  .hero-content {
+    text-align: center;
+  }
+
+  .service-box {
+    padding-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .hero-services li {
+    justify-content: center;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+    max-width: 100%;
+  }
+
+  .hero-subtitle {
+    max-width: 100%;
+  }
+
+  .hero-content {
+    margin-bottom: 35px;
+  }
+
+  .hero-form-card {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 576px) {
+
+  .hero-banner {
+    padding: 30px 0 20px;
+  }
+
+  .hero-inner {
+    padding-top: 0;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+    line-height: 1.1;
+    margin-bottom: 15px;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+
+  .service-box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+
+  .hero-services li {
+    justify-content: center;
+    font-size: 0.95rem;
+  }
+
+  /* Same style as tablet */
+  .hero-buttons {
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .hero-buttons a {
+    width: auto;
+  }
+
+  .explore-btn,
+  .quote-btn {
+    min-width: 150px;
+    height: 44px;
+    font-size: 0.9rem;
+  }
+
+  .hero-form-card {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+}

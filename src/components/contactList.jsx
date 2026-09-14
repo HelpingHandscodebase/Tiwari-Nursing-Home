@@ -103,10 +103,10 @@ function ContactList() {
               <p className="mb-2 d-flex align-items-center">
                 <FaEnvelope className="me-2 text-primary" />
                 <a
-                  href="mailto:sandeepvastrakar14@gmail.com"
+                  href="mailto:electricalbrothersgroup@gmail.com"
                   className="text-decoration-none text-dark"
                 >
-                  sandeepvastrakar14@gmail.com
+                  electricalbrothersgroup@gmail.com
                 </a>
               </p>
 
