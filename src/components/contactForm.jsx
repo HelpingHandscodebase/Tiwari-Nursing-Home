@@ -59,12 +59,12 @@ function ContactForm({ onSuccess }) {
 
       const formData = new FormData();
 
-      formData.append("entry.340212456", name);
-      formData.append("entry.1912365563", mobile);
-      formData.append("entry.1079988259", email);
-      formData.append("entry.84042076", address);
-      formData.append("entry.913493555", purpose);
-      formData.append("entry.1767068679", message);
+      formData.append("entry.1552647293", name);
+      formData.append("entry.1000295125", mobile);
+      formData.append("entry.1427787519", email);
+      formData.append("entry.1876976721", address);
+      formData.append("entry.799711200", purpose);
+      formData.append("entry.427642846", message);
 
       await fetch(
         CONTACT_FORM_URL,

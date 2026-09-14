@@ -47,23 +47,23 @@ function SolarForm({ onSuccess }) {
 
       const formData = new FormData();
 
-      formData.append("entry.309597755", form.current.user_name.value);
+      formData.append("entry.1117166573", form.current.user_name.value);
 
-      formData.append("entry.1977698151", form.current.user_phone.value);
+      formData.append("entry.1168548789", form.current.user_phone.value);
 
-      formData.append("entry.1048824276", form.current.user_email.value);
+      formData.append("entry.227750913", form.current.user_email.value);
 
-      formData.append("entry.527172131", form.current.property_type.value);
+      formData.append("entry.199275016", form.current.property_type.value);
 
-      formData.append("entry.2023124407", form.current.monthly_bill.value);
+      formData.append("entry.759399227", form.current.monthly_bill.value);
 
-      formData.append("entry.950109535", form.current.solar_capacity.value);
+      formData.append("entry.2041532631", form.current.solar_capacity.value);
 
-      formData.append("entry.732117588", form.current.system_type.value);
+      formData.append("entry.2046483664", form.current.system_type.value);
 
-      formData.append("entry.344067029", form.current.user_address.value);
+      formData.append("entry.1603023738", form.current.user_address.value);
 
-      formData.append("entry.1156005092", form.current.solar_requirement.value);
+      formData.append("entry.1565313527", form.current.solar_requirement.value);
 
       await fetch(
         SOLAR_FORM_URL,
