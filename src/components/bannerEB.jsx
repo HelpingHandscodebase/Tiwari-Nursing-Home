@@ -12,7 +12,7 @@ import emergencyImg from "../assets/electrical-brothers/clay.jpg";
 import solarImg from "../assets/electrical-brothers/solar.jpg";
 import wiring from "../assets/electrical-brothers/wiring.jpg";
 import toolbox from "../assets/electrical-brothers/toolbox.jpg";
-import smartMeter from "../assets/electrical-brothers/smart_electric_meter.webp";
+import smartMeter from "../assets/electrical-brothers/smart_meter.webp";
 
 import { useState } from "react";
 import Modal from "react-bootstrap/Modal";
