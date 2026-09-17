@@ -109,7 +109,7 @@ function BannerEB() {
 
             <a className="eb-service-card">
               <img src={smartMeter} alt="Smart Meter" />
-              <h4>SMART METER</h4>
+              <h4>NEW METER INSTALLATION</h4>
             </a>
 
             <a className="eb-service-card">
