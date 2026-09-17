@@ -1,0 +1,49 @@
+#service-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#service-form .form-control,
+#service-form .form-select {
+  border: 1px solid #d6dbe1;
+  border-radius: 6px;
+  height: 46px;
+  padding: 10px 14px;
+  box-shadow: none;
+}
+
+#service-form .form-control:focus,
+#service-form .form-select:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.12);
+}
+
+#service-form textarea.form-control {
+  height: 90px;
+  min-height: 90px;
+  resize: none;
+}
+
+#service-form .btn-primary {
+  height: 46px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+@media (max-width: 576px) {
+  #service-form .form-control,
+  #service-form .form-select {
+    height: 42px;
+    font-size: 14px;
+  }
+
+  #service-form textarea.form-control {
+    height: 80px;
+    min-height: 80px;
+  }
+
+  #service-form .btn-primary {
+    height: 42px;
+  }
+}
