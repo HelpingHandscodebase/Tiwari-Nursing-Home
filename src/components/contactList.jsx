@@ -5,7 +5,7 @@ import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import { useState } from "react";
-import ContactForm from "./contactForm";
+import ServiceForm from "./serviceForm";
 
 function ContactList() {
   const [show, setShow] = useState(false);
@@ -137,7 +137,7 @@ function ContactList() {
         </Modal.Header>
 
         <Modal.Body>
-          <ContactForm onSuccess={handleClose} />
+          <ServiceForm onSuccess={handleClose} />
         </Modal.Body>
       </Modal>
     </div>

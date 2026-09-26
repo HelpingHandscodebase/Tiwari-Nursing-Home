@@ -12,16 +12,19 @@ import emergencyImg from "../assets/electrical-brothers/clay.jpg";
 import solarImg from "../assets/electrical-brothers/solar.jpg";
 import wiring from "../assets/electrical-brothers/wiring.jpg";
 import toolbox from "../assets/electrical-brothers/toolbox.jpg";
-import smartMeter from "../assets/electrical-brothers/smart_electric_meter.webp";
+import smartMeter from "../assets/electrical-brothers/smart_meter.webp";
 
 import { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import ContactForm from "./contactForm";
 import SolarForm from "./solarForm";
+import ServiceForm from "./serviceForm";
 
 function BannerEB() {
   const [showContact, setShowContact] = useState(false);
   const [showSolar, setShowSolar] = useState(false);
+  const [showService, setShowService] = useState(false);
+  const [selectedService, setSelectedService] = useState("");
 
   const handleContactShow = () => {
     sessionStorage.setItem("formOpened", "true");
@@ -37,6 +40,16 @@ function BannerEB() {
   const handleSolarClose = () => setShowSolar(false);
 
   const phoneNumber = import.meta.env.VITE_PHONE_NUMBER;
+
+  const handleServiceShow = (service) => {
+    sessionStorage.setItem("formOpened", "true");
+    setSelectedService(service);
+    setShowService(true);
+  };
+
+  const handleServiceClose = () => {
+    setShowService(false);
+  };
 
   return (
     <>
@@ -107,15 +120,23 @@ function BannerEB() {
               <h4>NEW WIRING</h4>
             </a>
 
-            <a className="eb-service-card">
+            <div
+              className="eb-service-card"
+              onClick={() => handleServiceShow("New Meter Installation")}
+              style={{ cursor: "pointer" }}
+            >
               <img src={smartMeter} alt="Smart Meter" />
-              <h4>SMART METER</h4>
-            </a>
+              <h4>NEW METER INSTALLATION</h4>
+            </div>
 
-            <a className="eb-service-card">
+            <div
+              className="eb-service-card"
+              onClick={() => handleServiceShow("General Repair")}
+              style={{ cursor: "pointer" }}
+            >
               <img src={toolbox} alt="General Repair" />
               <h4>GENERAL REPAIR</h4>
-            </a>
+            </div>
 
             <div className="eb-key-services">
               <div className="eb-key-top">
@@ -181,6 +202,19 @@ function BannerEB() {
 
         <Modal.Body>
           <SolarForm onSuccess={handleSolarClose} />
+        </Modal.Body>
+      </Modal>
+
+      <Modal show={showService} onHide={handleServiceClose} centered size="md">
+        <Modal.Header closeButton>
+          <Modal.Title>{selectedService}</Modal.Title>
+        </Modal.Header>
+
+        <Modal.Body>
+          <ServiceForm
+            selectedService={selectedService}
+            onSuccess={handleServiceClose}
+          />
         </Modal.Body>
       </Modal>
     </>
