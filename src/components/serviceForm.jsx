@@ -42,10 +42,10 @@ function ServiceForm({ selectedService, onSuccess }) {
       const formData = new FormData();
 
       // Replace with your Google Form Entry IDs
-      formData.append("entry.1336435231", name);
-      formData.append("entry.1158563651", mobile);
-      formData.append("entry.1531685680", requirement);
-      formData.append("entry.1234878545", address);
+      formData.append("entry.1668558537", name);
+      formData.append("entry.510865625", mobile);
+      formData.append("entry.12708227", requirement);
+      formData.append("entry.1454424704", address);
 
       await fetch(FORM_URL, {
         method: "POST",
